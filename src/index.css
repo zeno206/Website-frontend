@@ -1139,7 +1139,7 @@ input {
   }
 
   .lgn-box {
-    padding: 0px 20px 10px 20px;
+    height: 100%;
   }
   .ul-div {
     display: block;
@@ -1148,7 +1148,7 @@ input {
     background-color: #6334baa6;
     border: 1px solid #fff;
     border-radius: 10px;
-    width: 27%;
+    width: 18%;
     padding: 21px 21px 21px 27px;
     list-style-type: disc;
     display: block;
