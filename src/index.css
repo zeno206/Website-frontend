@@ -1082,19 +1082,18 @@ input {
   }
 
   .bg-video {
+    object-fit: cover;
+    z-index: -1;
+    background:
+      linear-gradient(#6031bb, #7643b7), linear-gradient(#5d30ba, #0000),
+      linear-gradient(270deg, #a666b2, #0000),
+      linear-gradient(90deg, #b974b1, #b670b0);
+    width: 100%;
+    height: 100%;
+    padding-top: 78px;
     position: absolute;
     top: 0;
     left: 0;
-    height: 84%;
-    width: 100%;
-    object-fit: cover;
-    background:
-      linear-gradient(to top, rgb(118, 67, 183), #6031bb),
-      linear-gradient(to bottom, rgb(93, 48, 186), transparent),
-      linear-gradient(to left, rgb(166, 102, 178), transparent),
-      linear-gradient(to right, rgb(185, 116, 177), #b670b0);
-    z-index: -1;
-    padding-top: 78px;
   }
 
   .div-2 {
