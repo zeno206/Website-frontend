@@ -14,9 +14,9 @@
   display: flex;
 }
 .lgndiv {
-  background: linear-gradient(to right, rgb(116, 65, 183), #af6bb2);
+  background: linear-gradient(90deg, #7441b7, #af6bb2);
+  padding: 17px 10px 200px;
   display: flex;
-  padding: 17px 10px 20px 10px;
 }
 .div-4 {
   background:
