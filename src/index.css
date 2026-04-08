@@ -1106,12 +1106,11 @@ input {
 
   .div-2 {
     background:
-      linear-gradient(to top, rgb(116, 65, 183), #7643b7),
-      linear-gradient(to bottom, rgb(93, 48, 186), transparent),
-      linear-gradient(to left, rgb(166, 102, 178), transparent),
-      linear-gradient(to right, rgb(185, 116, 177), #b670b0);
+      linear-gradient(#7643b7, #7441b7), linear-gradient(#5d30ba, #0000),
+      linear-gradient(270deg, #a666b2, #0000),
+      linear-gradient(90deg, #b974b1, #b670b0);
+    padding-top: 48px;
     display: block;
-    padding-top: 30px;
   }
 
   .lgn-box {
