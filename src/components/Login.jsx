@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 
-async function Login() {
-  const login = (e) => {
+function Login() {
+  const login = async (e) => {
     e.preventDefault();
 
     const formdata = new FormData(e.target);
@@ -10,16 +10,16 @@ async function Login() {
       email: formdata.get("email"),
       password: formdata.get("password"),
     };
-    
-
-      const log = await axios.post(
+    try {
+      const res = await axios.post(
         "https://webiste-backend-q9b4.onrender.com/api/post/login",
         logininfo,
-      ).then((res)=>{
-   console.log(res.data)
-      }).catch((error)=>{
-    console.log(error)
-      })
+      );
+
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>
