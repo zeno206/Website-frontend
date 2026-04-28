@@ -1,54 +1,63 @@
 import React, { useState } from "react";
-import axios from "axios";
-import Popup from "./popup";
 import spinner from "../assets/spinner.gif";
+import Popup from "./popup";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-function Login() {
-  const [show, setshow] = useState(false);
-  const [show1, setshow1] = useState(false);
-  const [show2, setshow2] = useState(true);
+function Register() {
+  const [showx, setshowx] = useState(false);
+  const [showy, setshowy] = useState(true);
+  const [showz, setshowz] = useState(false);
 
   const navigate = useNavigate();
-  const reg = () => {
+  const lgn = () => {
     setTimeout(() => {
-      navigate("/reg");
+      navigate("/lgn");
     }, 500);
   };
-  const login = async (e) => {
+  const Regs = async (e) => {
     e.preventDefault();
-    setshow1(true);
-    setshow2(false);
-
+    setshowz(true);
+    setshowy(false);
     const formdata = new FormData(e.target);
-    const logininfo = {
+    const data = {
+      username: formdata.get("username"),
       email: formdata.get("email"),
       password: formdata.get("password"),
     };
     try {
-      const res = await axios.post(
-        "https://webiste-backend-q9b4.onrender.com/api/post/login",
-        logininfo,
+      const reg = await axios.post(
+        "https://webiste-backend-q9b4.onrender.com/api/post/reg",
+        data,
       );
-      setshow(true);
-      setshow1(false);
-      setshow2(true);
+      setshowz(false);
+      setshowy(true);
+      setshowx(true);
       setTimeout(() => {
         navigate("/");
-      }, 2000);
+      }, 1000);
       console.log(res.data);
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <>
       <div className="lgndiv">
         <div className="lgn-box">
-          <form className="lgn-frm" onSubmit={login}>
+          <form className="lgn-frm" onSubmit={Regs}>
             <h3 className="frm-h3">Welcome to my Portfolio</h3>
             <p className="frm-h2">Sign in or create your account to started</p>
-            <h1 className="h-btn">Login👋</h1>
+            <h1 className="h-btn">Register👋</h1>
+            <label htmlFor=""> Username</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter your username"
+              name="username"
+            />
+            <br />
             <label htmlFor=""> Email</label>
             <br />
             <input type="text" placeholder="Enter your email" name="email" />
@@ -57,21 +66,20 @@ function Login() {
             <br />
             <input type="password" placeholder="Password" name="password" />
             <br />
-            {show2 && <button className="lgn-btn">login</button>}
-            {show1 && (
+            {showy && <button className="lgn-btn">Sign in</button>}
+            {showz && (
               <button className="lgn-btn">
                 <img className="spin-img" src={spinner} alt="" />
               </button>
             )}
           </form>
           <h4 className="de">Or</h4>
-          <button onClick={reg} className="lgn-btn1">
-            Register
+          <button onClick={lgn} className="lgn-btn1">
+            Login
           </button>
         </div>
       </div>
-
-      {show && (
+      {showx && (
         <div className="popup">
           <Popup />
         </div>
@@ -79,4 +87,5 @@ function Login() {
     </>
   );
 }
-export default Login;
+
+export default Register;

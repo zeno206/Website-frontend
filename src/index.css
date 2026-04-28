@@ -806,6 +806,57 @@ input {
 .ul-div {
   display: none;
 }
+.popup-1 {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px;
+  position: relative;
+  background: linear-gradient(90deg, #5514ab, #923f96);
+}
+
+.popup {
+  width: 20%;
+  position: absolute;
+  top: 194px;
+  left: 485px;
+}
+
+.ri-check-line {
+  font-size: 46px;
+  color: white;
+  background-color: #a866b3;
+  padding: 3px;
+  border-radius: 39px;
+  position: absolute;
+  top: -32px;
+  left: 120px;
+  width: 17%;
+  border: 2px solid;
+}
+
+.spin-img {
+  width: 17px;
+}
+
+.pop-btn {
+  margin: 0px;
+  background-color: #651071;
+}
+
+.pop-h3 {
+  color: white;
+  font-size: 24px;
+  margin: 15px 0px 15px 0px;
+}
+
+.pop-p {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
 @media (max-width: 768px) {
   h4 {
@@ -1116,11 +1167,11 @@ input {
     display: block;
   }
 
-  .lgn-box {
-    width: 89%;
-    margin: 0 auto;
-    padding: 30px;
-    border-radius: 10px;
+  .lgndiv {
+    background: linear-gradient(90deg, #7441b7, #af6bb2);
+    padding: 17px 10px 250px;
+    display: flex;
+    position: relative;
   }
   .frm-h3 {
     text-align: center;
@@ -1166,6 +1217,8 @@ input {
 
   .lgn-box {
     height: 100%;
+    margin: 0px;
+    width: 100%;
   }
   .ul-div {
     display: block;
@@ -1227,5 +1280,25 @@ input {
   .n-1a {
     width: 100%;
     text-align: center;
+  }
+
+  .popup {
+    width: 48%;
+    position: absolute;
+    top: 191px;
+    left: 69px;
+  }
+
+  .ri-check-line {
+    font-size: 46px;
+    color: white;
+    background-color: #a866b3;
+    padding: 3px;
+    border-radius: 39px;
+    position: absolute;
+    top: -32px;
+    left: 84px;
+    width: 22%;
+    border: 2px solid;
   }
 }
